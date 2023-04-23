@@ -8,17 +8,17 @@ const errMsg = document.querySelector('#errMsg')
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault()
     const location = search.value
-    weatherMsg.textContent = 'Loading...'
-    errMsg.textContent = ''
+    weatherMsg.innerHTML = 'Loading...'
+    errMsg.innerHTML = ''
 
     fetch(`/weather?address=${location}`).then((response) => {
         response.json().then((data) => {
             if (data.error) {
-                weatherMsg.textContent = ''
-                return errMsg.textContent = data.error
+                weatherMsg.innerHTML = ''
+                return errMsg.innerHTML = data.error
             }
-                errMsg.textContent = ''
-                return weatherMsg.textContent = `In ${data.location} it is ${data.forecast}`
+                errMsg.innerHTML = ''
+                return weatherMsg.innerHTML = `In ${data.location} it is ${data.forecast}`
         })
     })
 })
