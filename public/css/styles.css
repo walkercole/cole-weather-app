@@ -39,6 +39,12 @@ header a {
     text-decoration: none;
 }
 
+footer a {
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
+
 .heroImg {
     width: 350px;
 }
