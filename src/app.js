@@ -28,6 +28,7 @@ hbs.registerPartials(partialsPath)
 // Setup static Directory serve
 app.use(express.static(publicDirPath))
 
+app.use(express.static(path.resolve(__dirname, "../react-weather/build")));
 // `res.render` to dynamically serve templated views
 app.get('', (req, res) => {
     res.render('index', {
