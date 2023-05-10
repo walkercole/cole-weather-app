@@ -45,7 +45,7 @@ function Form() {
             </div> */}
             <div className="text-center" />
             <form onSubmit={handleSubmit}>
-                <label htmlFor="location" className="block text-sm font-medium leading-2 text-white">What's the weather in...</label>
+                <label htmlFor="location" className="block text-sm leading-2 font-semibold text-white">What's the weather in...</label>
                 <div className="mt-2">
                 <input id="location" placeholder="Address, City, Zipcode, etc..." name="location" autoComplete="location" required className="inline-block w-60 px-4 mx-auto rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6" />
                 <button type="submit" className="inline-block w-40 mx-4 my-2 justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Submit</button>
@@ -55,8 +55,8 @@ function Form() {
             <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[20rem]" aria-hidden="true">
                 <div className="relative left-1/2 -z-10 aspect-[1155/678] w-[36.125rem] max-w-none -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-40rem)] sm:w-[72.1875rem]" style={{clipPath: 'polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)'}} />
             </div>
-            <p id="weatherMsg"></p>
-            <p id="errMsg" />
+            <p className="font-semibold text-gray-300" id="weatherMsg"></p>
+            <p className="font-semibold text-gray-300" id="errMsg" />
             <div className="mx-auto mt-16 max-w-2xl rounded ring-1 ring-gray-200 sm:mt-20 lg:mx-0 lg:flex lg:max-w-none">
                 <div className="p-8 sm:p-10 lg:flex-auto">
                     <h3 className="text-2xl font-bold tracking-tight text-gray-200">{state.location}</h3>

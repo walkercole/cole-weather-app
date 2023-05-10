@@ -14,7 +14,7 @@ const forecast = (lat, long, callback) => {
     }
     else {
         const data = body.current;
-        callback(undefined, {weather: data.weather_descriptions, temp: data.temperature, humidity: data.humidity, windDir: data.wind_dir, visibility: data.visibility, uv: data.uv_index, rain: data.precip, wind:data.wind_speed, forecast: `It is currently ${data.temperature} degrees out. It feels like ${data.feelslike} degrees outside. There's ${data.precip} Millimeters of rain projected with wind speeds of ${data.wind_speed} mph` })
+        callback(undefined, {weather: data.weather_descriptions, temp: data.temperature, humidity: data.humidity, windDir: data.wind_dir, visibility: data.visibility, uv: data.uv_index, rain: data.precip, wind:data.wind_speed, forecast: `${data.weather_descriptions} - It is currently ${data.temperature} degrees out. It feels like ${data.feelslike} degrees outside. There's ${data.precip} Millimeters of rain projected with wind speeds of ${data.wind_speed} mph` })
     }
     });
 }
